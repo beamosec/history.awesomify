@@ -1,18 +1,31 @@
 //Functions that link to other `chrome://` urls
+function navToHistory() {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    chrome.tabs.update(tabs[0].id, {url: "chrome://history"});
+  });
+
+}
 function navToExtensions() {
-    console.log('extensions!');
-    chrome.tabs.create({url:"chrome://extensions"});
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    chrome.tabs.update(tabs[0].id, {url: "chrome://extensions"});
+  });
+
 }
 function navToSettings() {
-  console.log('settings!');
-  chrome.tabs.create({url:"chrome://settings"});
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    chrome.tabs.update(tabs[0].id, {url: "chrome://settings"});
+  });
+
 }
 function navToBookmarks() {
-  console.log('bookmarks!');
-  chrome.tabs.create({url:"chrome://bookmarks"});
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    chrome.tabs.update(tabs[0].id, {url: "chrome://bookmarks/#1"});
+  });
+
 }
 $(document).ready(function() {
     $('#extensions').click(navToExtensions);
     $('#settings').click(navToSettings);
     $('#bookmarks').click(navToBookmarks);
+    $('#history').click(navToHistory);
 });
