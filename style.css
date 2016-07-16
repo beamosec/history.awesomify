@@ -1,6 +1,35 @@
-body {
-    background-color: blueviolet;
+/* IMPORTANT NOTES:
+
+Regarding Fonts:
+    While other Roboto fonts are in the fonts folder, only import ones 
+    if you need them. This will improve load times (even if they are small
+    differences), and make life easier.
+    
+    Also, I am using Roboto Light as my main font, and Roboto Regular as
+    a bold font. Obviously, Roboto Italic is being used for italics.
+
+Regarding the side bar(#side-nav)
+    Roboto is intentionally not used (Was too light for the side.)
+*/
+
+/*beginning of font imports*/
+@font-face {
+    font-family: Roboto;
+    src: url("fonts/Roboto-Light.ttf");
 }
+/*end of font imports*/
+
+/*main styles (for the big elements-- e.g. body, #main, etc.)*/
+#main {
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 17em;
+    font-family: Roboto;
+}
+/*beginning of side bar navigation styles*/
 #side-nav {
     background: white;
     position: fixed;
@@ -9,6 +38,7 @@ body {
     bottom: 0;
     padding-left: 0;
     padding-right: 2em;
+    width: 15em;
 }
 #side-nav > ul {
     list-style-type: none;
@@ -37,13 +67,18 @@ body {
     border-left: 1em solid gray;
     background-color: #efefef;
 }
-button {
+#side-nav > ul > li > button {
     background-color: inherit;
     border: 0;
-    color: #999;
+    color: #555;
     cursor: pointer;
     font: inherit;
-    line-height: 1.417em;
-    margin: 6px 0;
+    margin: .4em 0;
     padding: 0;
 }
+/*end of side bar navigation styles*/
+/*beginning of credit styles*/
+.credit-item {
+    padding: 1em;
+}
+/*end of credit styles*/
