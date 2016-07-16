@@ -23,9 +23,16 @@ function navToBookmarks() {
   });
 
 }
+function navToAbout() {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    chrome.tabs.update(tabs[0].id, {url: "chrome://version"});
+  });
+
+}
 $(document).ready(function() {
     $('#extensions').click(navToExtensions);
     $('#settings').click(navToSettings);
     $('#bookmarks').click(navToBookmarks);
     $('#history').click(navToHistory);
+    $('#about').click(navToAbout);
 });

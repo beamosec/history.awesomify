@@ -38,7 +38,7 @@ body {
     background-color: #efefef;
 }
 button {
-    background-color: white;
+    background-color: inherit;
     border: 0;
     color: #999;
     cursor: pointer;
