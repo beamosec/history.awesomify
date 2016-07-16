@@ -1,0 +1,168 @@
+/* IMPORTANT NOTES:
+
+Regarding Fonts:
+    While other Roboto fonts are in the fonts folder, only import ones 
+    if you need them. This will improve load times (even if they are small
+    differences), and make life easier.
+    
+    Also, I am using Roboto Light as my main font, and Roboto Regular as
+    a bold font. Obviously, Roboto Italic is being used for italics.
+
+Regarding the side bar(#side-nav)
+    Roboto is intentionally not used (Was too light for the side.)
+*/
+
+/*beginning of font imports*/
+@font-face {
+    font-family: Roboto;
+    src: url("fonts/Roboto-Light.ttf");
+}
+/*end of font imports*/
+
+/*main styles (for the big elements-- e.g. body, #main, etc.)*/
+#main {
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 17em;
+    font-family: Roboto;
+    overflow-y: hidden;
+}
+
+/*beginning of ui element styles*/
+.slider {
+    background-color: #8e44ad;
+    width: 9em; /*the slider-icons are each 2.5em, and they are spaced by 2.5em.*/
+    border-radius: 25px;
+    height: 3.5em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+    margin: 6em;
+    position: relative;
+    top: -100%;
+    transform: translateY(-12.5%);
+}
+.slider-icon {
+    height: 5em;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.slider-track {
+    position: absolute;
+    bottom: 1em;
+    width: 98%;
+    height: 5em;
+    border-radius: 25px;
+    background: #eee;
+}
+/*end of ui element styles*/
+
+/*beginning of top nav styles*/
+.top-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 17em;
+}
+.top-nav > * {
+    display: inline;
+}
+.tab {
+    font-family: Roboto;
+    background-color: inherit;
+    border: none;
+    padding: 1.5em 2.5em;
+    font-size: 1.4em;
+}
+#clearHistory {
+    border: none;
+    background-color: #8e44ad;
+    color: white;
+    font-size: 1.4em;
+    padding: 1.5em 3em;
+}
+#clearHistory:focus {
+    outline: none;
+}
+.currTab {
+    background-color: #efefef;
+}
+.top-nav > form {
+    padding-right: 3em;
+    padding-left: 1em;
+}
+#search {
+    padding: .3em;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+}
+#search::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    color: #efefef;
+}
+#search-icon {
+    height: 1.5em;
+    transform: translateY(25%);
+}
+#search:focus {
+    outline: none;
+}
+/*end of top nav styles*/
+
+/*beginning of side bar navigation styles*/
+#side-nav {
+    background: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding-left: 0;
+    padding-right: 2em;
+    width: 15em;
+}
+#side-nav > ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.nav-item {
+    padding-right: .5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 3em;
+    border-left: 1em solid white;
+}
+.nav-link {
+    color: inherit;
+    text-decoration: none;
+    border: none;
+    background: inherit;
+}
+.nav-link:hover {
+    cursor: pointer;
+}
+.nav-link:focus {
+    outline: none;
+}
+#history-link {
+    border-left: 1em solid gray;
+    background-color: #efefef;
+}
+#side-nav > ul > li > button {
+    background-color: inherit;
+    border: 0;
+    color: #555;
+    cursor: pointer;
+    font: inherit;
+    margin: .4em 0;
+    padding: 0;
+}
+/*end of side bar navigation styles*/
+/*beginning of credit styles*/
+.credit-item {
+    padding: 1em;
+}
+/*end of credit styles*/

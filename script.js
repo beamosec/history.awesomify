@@ -1,3 +1,18 @@
+$(document).ready(function() {
+    $('#extensions').click(navToExtensions);
+    $('#settings').click(navToSettings);
+    $('#history').click(navToHistory);
+    $('#about').click(navToAbout);
+    $('#credits').click(navToCredits);
+    $('.slider').draggable({
+        axis: 'x',
+        scroll: "false",
+        containment: ".slider-track",
+        cursor: 'grab'
+    });
+});
+
+
 //Functions that link to other `chrome://` urls
 function navToHistory() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
@@ -27,10 +42,3 @@ function navToCredits() {
         chrome.tabs.update(tabs[0].id, {url: "credits.html"});
     });
 }
-$(document).ready(function() {
-    $('#extensions').click(navToExtensions);
-    $('#settings').click(navToSettings);
-    $('#history').click(navToHistory);
-    $('#about').click(navToAbout);
-    $('#credits').click(navToCredits);
-});

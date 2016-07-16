@@ -3,8 +3,10 @@
     <head>
         <meta charset='utf-8'/>
         <title>History</title>
-        <link rel='stylesheet' href='style.css'/>
-        <script src="jquery.js"></script> 
+        <link rel='stylesheet' href='history.css'/>
+<!--        <link rel='stylesheet' href='style.css'/>-->
+        <script src="jquery.js"></script>
+        <script src="jquery-ui.js"></script><!--dragging capabilities-->
         <!--It's better that we do an internal script. Please keep it that way.-->
         <script src='script.js'></script>
     </head>
@@ -31,8 +33,18 @@
             </ul>
         </div>
         <div id='main'>
+            <div class='top-nav'>
+                <form>
+                    <img src='icons/search.svg' id='search-icon'/>
+                    <input id='search' type='search' placeholder='search'/>
+                </form>
+                <button class='currTab tab'>Visited</button>
+                <button class='tab'>Analytics</button>
+                <button class='tab'>Search</button>
+                <button id='clearHistory'>Delete History</button>
+            </div>
             <div class='slider-track'>
-                <div class='slider'>
+                <div class='slider' draggable="true">
                     <img src='icons/more.svg' class='slider-icon'/>
                 </div>
             </div>
