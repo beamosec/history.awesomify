@@ -4,7 +4,8 @@
         <meta charset='utf-8'/>
         <title>History</title>
         <link rel='stylesheet' href='style.css'/>
-        <script src='jquery.js'></script>
+        <script src="jquery.js"></script> 
+        <!--It's better that we do an internal script. Please keep it that way.-->
         <script src='script.js'></script>
     </head>
     <body>
@@ -12,20 +13,19 @@
             <ul>
                 <li class='nav-item' id='history-link'>
                     <b>
-                        <a href='chrome://history' class='nav-link'>
+                      <a href='chrome://history' class='nav-link'>
                             History
                         </a>
                     </b>
                 </li>
                 <li class='nav-item'>
-                    <a id='extensions' class='nav-link'>
-                        Extensions
-                    </a>
-                </li>
+                       <button id="extensions">Extensions</button>
+                  </li>
                 <li class='nav-item'>
-                    <a href='chrome://settings' class='nav-link'>
-                        Settings
-                    </a>
+                  <button id="settings">Settings</button>
+                </li>
+                 <li class='nav-item'>
+                  <button id="bookmarks">Bookmarks</button>
                 </li>
             </ul>
             <ul>
