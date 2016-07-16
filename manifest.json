@@ -1,0 +1,12 @@
+{
+    "name": "history.awesomeify",
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "chrome_url_overrides": {
+        "history": "test.html"
+    },
+    "permissions": [
+        "history",
+        "browsingData"
+    ]
+}
