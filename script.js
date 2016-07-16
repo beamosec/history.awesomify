@@ -17,12 +17,6 @@ function navToSettings() {
   });
 
 }
-function navToBookmarks() {
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    chrome.tabs.update(tabs[0].id, {url: "chrome://bookmarks/#1"});
-  });
-
-}
 function navToAbout() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     chrome.tabs.update(tabs[0].id, {url: "chrome://version"});
