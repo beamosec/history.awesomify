@@ -7,6 +7,13 @@
     },
     "permissions": [
         "history",
-        "browsingData"
-    ]
+        "browsingData",
+        "tabs",
+        "webNavigation",
+        "management"
+    ],
+    "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+
+
 }
