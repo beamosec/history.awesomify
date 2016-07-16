@@ -29,6 +29,38 @@ Regarding the side bar(#side-nav)
     left: 17em;
     font-family: Roboto;
 }
+
+/*beginning of ui element styles*/
+.slider {
+    background-color: #2c3e50;
+    width: 9em; /*the slider-icons are each 2.5em, and they are spaced by 2.5em.*/
+    border-radius: 25px;
+    height: 3.5em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+    margin: 6em;
+    position: relative; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+.slider-icon {
+    height: 5em;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.slider-track {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 98%;
+    height: 5em;
+    border-radius: 25px;
+    background: #eee;
+}
+/*end of ui element styles*/
+
 /*beginning of side bar navigation styles*/
 #side-nav {
     background: white;
