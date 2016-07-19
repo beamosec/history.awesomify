@@ -1,5 +1,7 @@
-var open = true;
+var open = true; //to manage the status of the .top-nav
+
 $(document).ready(function() {
+    //UI JS
     checkWinSize();
     $('#extensions').click(navToExtensions);
     $('#settings').click(navToSettings);
@@ -15,6 +17,8 @@ $(document).ready(function() {
     $('.expand').click(toggleMenu);
     $(window).on('resize', checkWinSize);
 });
+
+//.top-nav display functions
 function toggleMenu() {
     console.log('functional');
     $('.collapsible').css('display', open ? 'block' : 'none');

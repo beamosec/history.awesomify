@@ -76,6 +76,7 @@ Regarding the side bar(#side-nav)
     right: 0;
     left: 17em;
     display: flex;  
+    z-index: 5;
     justify-content: space-between;
 }
 .top-nav > * {
@@ -83,10 +84,10 @@ Regarding the side bar(#side-nav)
 }
 .tab {
     font-family: Roboto;
-    background-color: inherit;
     border: none;
     padding: 1.5em 2.5em;
     font-size: 1.4em;
+    background-color: white;
 }
 #clearHistory {
     border: none;
@@ -199,7 +200,10 @@ Regarding the side bar(#side-nav)
     .collapsible {
         display: none;
         position: absolute;
-        transform: translateY(50%); 
+        transform: translateY(25%); 
+    }
+    .tab {
+        width: 100%;
     }
 }
 @media (max-width: 730px) {
