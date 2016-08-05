@@ -2,13 +2,14 @@
 <html>
     <head>
         <meta charset='utf-8'/>
-        <title>History</title>
-        <link rel='stylesheet' href='history.css'/>
-<!--        <link rel='stylesheet' href='style.css'/>-->
-        <script src="jquery.js"></script>
-        <script src="jquery-ui.js"></script><!--dragging capabilities-->
-        <!--It's better that we do an internal script. Please keep it that way.-->
-        <script src='script.js'></script>
+        <title>history.awesomify</title>
+        <link rel='stylesheet' href='style.css'/>
+		<!--do not change to a cdn. keep local -->
+        <script src="scripts/jquery.js"></script>
+		<script src="scripts/favicon.js"></script>
+        <script src="scripts/jquery-ui.js"></script><!--dragging capabilities-->
+        <script src="scripts/sidebar.js"></script>
+		<script src='scripts/main.js'></script>
     </head>
     <body>
         <div id='side-nav'>
@@ -48,8 +49,7 @@
                 </div>
                 <button id='clearHistory'>Delete History</button>
             </div>
-            <div class='timeline'>
-            
+            <div class='visited'>
             </div>
             <div class='slider-track'>
                 <div class='slider' draggable="true">

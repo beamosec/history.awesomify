@@ -1,0 +1,21 @@
+How exactly are the items in the History map organized?
+By time and tabs
+
+What would be included in the analytics?
+Time spent on particular website, on the internet, and average values
+
+How much of the history would be included (a range preferably)?
+Last 48h I'd say, it really depends on the back-end side
+
+Could you give me some more details about an app such as this one?
+What details exactly?
+
+What is the object returned for a page visit instance
+{
+	id: "14921"
+	lastVisitTime: 1470411780262.54
+	title: "Duck test - Wikiwand"
+	typedCount: 0
+	url: "https://www.wikiwand.com/en/Duck_test"
+	visitCount: 1
+}

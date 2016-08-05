@@ -1,37 +1,12 @@
-var open = true; //to manage the status of the .top-nav
-
+//ALWAYS IMPORT JQUERY FIRST.
 $(document).ready(function() {
-    //UI JS
-    checkWinSize();
-    $('#extensions').click(navToExtensions);
+	$('#extensions').click(navToExtensions);
     $('#settings').click(navToSettings);
     $('#history').click(navToHistory);
     $('#about').click(navToAbout);
     $('#credits').click(navToCredits);
-    $('.slider').draggable({
-        axis: 'x',
-        scroll: "false",
-        containment: ".slider-track",
-        cursor: 'grab'
-    });
-    $('.expand').click(toggleMenu);
-    $(window).on('resize', checkWinSize);
 });
 
-//.top-nav display functions
-function toggleMenu() {
-    console.log('functional');
-    $('.collapsible').css('display', open ? 'block' : 'none');
-    $('.collapsible > *').css('display', open ? 'block': 'none');
-    open = !open;
-}
-function checkWinSize() {
-    var bool = window.innerWidth < 1100;
-    $('.expand').css('display', bool ? 'inline' : 'none');
-    $('#menu-icon').css('display', bool ? 'inline' : 'none');
-    $('.collapsible').css('display', bool ? 'none' : 'inline');
-    $('.collapsible > *').css('display', bool ? 'none' : 'inline');
-}
 //Functions that link to other `chrome://` urls
 function navToHistory() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
