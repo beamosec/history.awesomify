@@ -28,6 +28,9 @@ $(document).ready(function() {
 		text: '', 
 		//time since Unix epoch - 48 hours(1000ms * 60s * 60m * 24h * 2d)
 		startTime: (new Date()).getTime() - 1000 * 60 * 60 * 24 * 2, 
+		//only takes a 32 bit signed integer 
+		//(Math.pow(2, 32) is not the same as 01111111111111111111111111111111 
+		//in binary)
 		maxResults: getLargestIntOfSize(31),
 	}, function(results) {
 		
@@ -68,7 +71,16 @@ $(document).ready(function() {
 			
 		} //end of domain grouping
 		
-		console.log(domains);
+		var domainKeys = Object.keys(domains);
+		
+		//get favicon urls. Seperate for understandability. Keep it that way.
+		for(let i in domainKeys) {
+			domains[domainKeys[i]].favicon = "chrome://favicon/" +
+				domains[domainKeys[i]].url;
+			document.write('<img height="20" src="' + domains[domainKeys[i]].favicon + '"/>');	
+		}
+		
+		
 		
 	});
 	

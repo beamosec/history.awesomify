@@ -30,8 +30,28 @@ Regarding the side bar(#side-nav)
     font-family: Roboto;
     overflow-y: hidden;
 }
+
 .visited::-webkit-scrollbar { 
   	display: none;
+}
+.site {
+	background: white;
+	margin: 1em;
+	display: inline-flex;
+	justify-content: space-between;
+	padding: .05em 1em;
+	font-size: 1.4em;
+	border-radius: .4em;
+}
+.site-center-element {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.site > img {
+	height: 32px;
+	position: relative;
+	top: -50%;
+	transform: translateY(50%);
 }
 /*beginning of timeline styles*/
 .visited {
