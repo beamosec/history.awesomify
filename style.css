@@ -31,7 +31,7 @@ Regarding the side bar(#side-nav)
     overflow-y: hidden;
 }
 
-.timeline::-webkit-scrollbar { 
+.visited::-webkit-scrollbar { 
   	display: none;
 }
 .site {
@@ -47,14 +47,14 @@ Regarding the side bar(#side-nav)
 	padding-left: 1em;
 	padding-right: 1em;
 }
-.favicon {
+.site > img {
 	height: 32px;
 	position: relative;
 	top: -50%;
 	transform: translateY(50%);
 }
 /*beginning of timeline styles*/
-.timeline {
+.visited {
     position: fixed;
     right: 0;
     top: 6em;
@@ -71,38 +71,25 @@ Regarding the side bar(#side-nav)
     height: 3.5em;
     padding-top: .2em;
     padding-bottom: .2em;
-	margin-top: 6em;
-}
-.slider-container {
-	position: relative;
-	width: 98%;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+    margin: 6em;
+    position: relative;
+    top: -100%;
+    transform: translateY(-12.5%);
 }
 .slider-icon {
     height: 5em;
     position: relative;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .slider-track {
-	position: relative;
-	top: -50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-    width: 99%;
-	border: 3% solid black;
+    position: absolute;
+    bottom: .5em;
+    width: 98%;
     height: 5em;
     border-radius: 25px;
     background: #eee;
-}
-.slider-parent {
-	position: absolute;
-	bottom: 0;
-	height: 6em;
-	width: 100%;
 }
 /*end of timeline styles*/
 
@@ -250,6 +237,6 @@ Regarding the side bar(#side-nav)
         justify-content: space-between;
     }
     #clearHistory {
-        padding: 1.5em 1.5em;
+        padding: 1.5em .4em;
     }
 }
