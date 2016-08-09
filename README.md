@@ -22,4 +22,5 @@ be installed in order for it to be debuggable.
 4. Click "Load unpacked extension"
 5. Find the folder that you downloaded, and select it.
  * If you see an error, please [write an issue](https://github.com/Darksmurf/history.awesomeify/issues)
+ * If you have any questions, please write an issue with the label "question". 
 6. Check if it is installed by going to chrome://history.

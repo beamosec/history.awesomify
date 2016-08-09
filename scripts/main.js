@@ -77,7 +77,7 @@ $(document).ready(function() {
 		for(let i in domainKeys) {
 			domains[domainKeys[i]].favicon = "chrome://favicon/" +
 				domains[domainKeys[i]].url;
-			document.write('<img height="20" src="' + domains[domainKeys[i]].favicon + '"/>');	
+//			document.write('<img height="20" src="' + domains[domainKeys[i]].favicon + '"/>');	
 		}
 		
 		
